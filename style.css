@@ -20,7 +20,6 @@ header
     color: white;
     background-color: rgb(56, 56, 56);
     text-align: center;
-    font-size: 40px;
     border-left: white dashed 2px;
     border-right: white dashed 2px;
     padding-top: 1%;
@@ -31,6 +30,7 @@ h1
     margin: 0px;
     border: 0px;
     padding: 0px;
+    font-size: 40px;
 }
 span
 {
@@ -99,7 +99,8 @@ span
 {
     margin-right: auto;
     margin-left: auto;
-    margin-top: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     background-color: #2d83c4;
     color: white;
     border-radius: 10px 10px 10px 10px;
