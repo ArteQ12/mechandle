@@ -94,6 +94,14 @@ span
 {
     background-image: linear-gradient(to bottom, rgb(56, 56, 56), rgb(48, 45, 45));
 }
+#mess
+{
+    background-color: 
+    background-color: #2d83c4;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    
+}
 a
 {
     color: white;
