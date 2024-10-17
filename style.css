@@ -15,7 +15,7 @@ body
     margin-right: auto;
     text-align: center;
 }
-nav
+header
 {
     color: white;
     background-color: rgb(56, 56, 56);
@@ -56,19 +56,6 @@ span
     border: 0px;
     margin-right: 1%;
 }
-.image-container {
-    display: inline-block;
-    overflow: hidden;
-}
-
-.image-container #Rimg {
-    transition: filter 0.3s ease;
-}
-
-.image-container:hover #Rimg {
-    filter: sepia(100%) saturate(500%) hue-rotate(90deg);
-}
-
 #btn1
 {
     box-sizing: border-box;
