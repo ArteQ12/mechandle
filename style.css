@@ -96,11 +96,10 @@ span
 }
 #mess
 {
-    background-color: 
     background-color: #2d83c4;
     color: white;
     border-radius: 10px 10px 10px 10px;
-    
+    padding: 10px;
 }
 a
 {
