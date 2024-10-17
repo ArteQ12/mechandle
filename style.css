@@ -5,6 +5,7 @@ body
     padding: 0px;
     margin: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
 }
 #container
 {
@@ -12,6 +13,7 @@ body
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 nav
 {
@@ -116,6 +118,12 @@ span
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
     
+}
+#btn3
+{
+    border-radius: 8px;
+    color: white;
+    background-color: #053003;
 }
 a
 {
