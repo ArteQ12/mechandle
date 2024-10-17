@@ -95,6 +95,9 @@ span
 }
 #mess
 {
+    margin-right: auto;
+    margin-left: auto;
+    
     background-color: #2d83c4;
     color: white;
     border-radius: 10px 10px 10px 10px;
