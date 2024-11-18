@@ -1,8 +1,5 @@
 <html>
 <head>
-<?php
-session_start();
-?>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="style.css">
     <title>Mechandle - cytaty</title>
@@ -22,167 +19,19 @@ session_start();
 <main>
 <div id="triangle_margin">
 <div id='mess'>
-<?php
-require_once "connect.php";
-$polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
-if ($polaczenie->connect_errno!=0)
-{
-    echo "Error: ".$polaczenie->connect_errno."Opis: ".$polaczenie->connect_error;
-}
-else
-{
-    $zapytanie_cytatow = "SELECT c.cytat, n.imie, n.nazwisko FROM cytaty c, nauczyciele n WHERE c.id=5 AND n.id=c.id_nauczyciele";
-    if ($rezultat_cytatow = @$polaczenie->query($zapytanie_cytatow))
-    {
-        $tablica_cytatow = $rezultat_cytatow->fetch_assoc();
-        $_SESSION['cytat'] = $tablica_cytatow['cytat'];
-        $_SESSION['imie'] = $tablica_cytatow['imie'];
-        $_SESSION['nazwisko'] = $tablica_cytatow['nazwisko'];
-        $_SESSION['rozwiazanie'] = $_SESSION['imie']." ".$_SESSION['nazwisko'];
-        $rezultat_cytatow->free_result();
-        echo $_SESSION['cytat'];
-
-    }
-}
-?>
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 </div>
 <div class="triangle"></div>
-<?php
-if ($_SESSION['win']==1)
-{
-    echo '<div class="win">Gratulacje użytkowniku!🎉<br>Ten cytat powiedzał: '.$_SESSION['imie']." ".$_SESSION['nazwisko'].'</div>';
-}
-elseif ($_SESSION['win']==2)
-{
-    echo '<div class="lose">Wykorzystałeś wszystkie próby<br>Poprawna odpowiedź to: '.$_SESSION['imie']." ".$_SESSION['nazwisko'].'</div>';
-}
-else
-{
-    echo '<form action="sprawdz.php" method="post">
-    <datalist id="podpowiedzi">';
-    $pattern="null";
-    for ($i=1;$i<77;$i++){
-    $zapytanie_nauczycieli = "SELECT id, imie, nazwisko FROM nauczyciele WHERE id=".$i;
-    if ($rezultat_nauczycieli = @$polaczenie->query($zapytanie_nauczycieli)){
-        $tablica_nauczycieli = $rezultat_nauczycieli->fetch_assoc();
-        $_SESSION["imie$i"] = $tablica_nauczycieli['imie'];
-        $_SESSION["nazwisko$i"] = $tablica_nauczycieli['nazwisko'];
-        $rezultat_nauczycieli->free_result();
-        echo '<option value="'.$_SESSION["imie$i"]." ".$_SESSION["nazwisko$i"].'">';
-        $pattern=$pattern."|".$_SESSION["imie$i"]." ".$_SESSION["nazwisko$i"];
-    }
-    }
-    echo '</datalist>
-    <input id="text" list="podpowiedzi" name="guess" placeholder="Wpisz nazwisko" required pattern="';
-    echo $pattern;
-    echo '">
+<form action="sprawdz.php" method="post">
+    <input id="text" list="podpowiedzi" name="guess" placeholder="Wpisz nazwisko">
     <input id="submit" type="submit" value="Zgadnij">
-    </form>';
-}
-?>
-    <?php
-    if ($_SESSION['guess1']!==0)
-    {
-    if ($_SESSION['guess1']===$_SESSION['rozwiazanie'])
-    {
-        echo '<div class="mark anime"><img src="good.png" class="checked">';
-    }
-    else{
-        echo '<div class="mark anime"><img src="bad.png" class="checked">';
-    }
-    }
-    else
-    {
-        echo '<div class="markdark"><p>1</p>';
-    }
-    ?>
-</div>
-    <?php
-    if ($_SESSION['guess1']!==0)
-    {
-        echo '<div class="guess anime"><p>';
-        echo $_SESSION['guess1'];
-    }
-    else
-    {
-        echo '<div class="guessdark"><p>';
-    }
-    ?>
-</p>
-</div>
-    <?php
-    if ($_SESSION['guess2']!==0)
-    {
-    if ($_SESSION['guess2']===$_SESSION['rozwiazanie'])
-    {
-        echo '<div class="mark anime"><img src="good.png" class="checked">';
-    }
-    else{
-        echo '<div class="mark anime"><img src="bad.png" class="checked">';
-    }
-    }
-    else
-    {
-        echo '<div class="markdark"><p>2</p>';
-    }
-    ?>
-</div>
-    <?php
-    if ($_SESSION['guess2']!==0)
-    {
-    echo '<div class="guess anime"><p>';
-    echo $_SESSION['guess2'];
-    }
-    else
-    {
-        echo '<div class="guessdark"><p>';
-    }
-    ?>
-</p></div>
-    <?php
-    if ($_SESSION['guess3']!==0)
-    {
-    if ($_SESSION['guess3']===$_SESSION['rozwiazanie'])
-    {
-        echo '<div class="mark anime"><img src="good.png" class="checked">';
-    }
-    else{
-        echo '<div class="mark anime"><img src="bad.png" class="checked">';
-    }
-    }
-    else
-    {
-        echo '<div class="markdark"><p>3</p>';
-    }
-    ?>
-</p>
-</div>
-    <?php
-    if ($_SESSION['guess3']!==0)
-    {
-    echo '<div class="guess anime"><p>';
-    echo $_SESSION['guess3'];
-    }
-    else
-    {
-        echo '<div class="guessdark"><p>';
-    }
-    if ($_SESSION['win']==1)
-    {
-        $_SESSION['win']=0;
-        $_SESSION['guess1']=0;
-        $_SESSION['guess2']=0;
-        $_SESSION['guess3']=0;
-    }
-    elseif ($_SESSION['win']==2)
-    {
-        $_SESSION['win']=0;
-        $_SESSION['guess1']=0;
-        $_SESSION['guess2']=0;
-        $_SESSION['guess3']=0;
-    }
-    ?>
-</p>
+    </form>
+      <div class="mark anime"><img src="bad.png" class="checked"></div>
+    <div class="guess anime"><p>Małgorzata Różalska</p></div>
+    <div class="mark anime"><img src="bad.png" class="checked"></div>
+    <div class="guess anime"><p>Małgorzata Różalska</p></div>
+    <div class="mark anime"><img src="bad.png" class="checked"></div>
+    <div class="guess anime"><p>Małgorzata Różalska</p></div>
 </div>
 </div>
 </main>
