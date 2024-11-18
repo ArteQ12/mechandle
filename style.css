@@ -5,21 +5,22 @@ body
     padding: 0px;
     margin: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
 }
 #container
 {
     height: 100%;
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    min-width: 600px;
+    background-color: #1a1919;
 }
-header
+nav
 {
     color: white;
-    background-color: rgb(56, 56, 56);
+    background-color: #383838;
     text-align: center;
+    font-size: 40px;
     border-left: white dashed 2px;
     border-right: white dashed 2px;
     padding-top: 1%;
@@ -30,7 +31,6 @@ h1
     margin: 0px;
     border: 0px;
     padding: 0px;
-    font-size: 50px;
 }
 span
 {
@@ -40,7 +40,7 @@ span
 {
     float: left;
     width: 64px;
-    background-color: rgb(56, 56, 56);
+    background-color: #383838;
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -50,7 +50,7 @@ span
 {
     float: right;
     width: 64px;
-    background-color: rgb(56, 56, 56);
+    background-color: #383838;
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -61,7 +61,7 @@ span
     box-sizing: border-box;
     float: left;
     width: 50%;
-    background-color: rgb(56, 56, 56);
+    background-color: #383838;
     border-radius: 0px 0px 0px 10px;
     border-left: white dashed 2px;
     border-bottom: white dashed 2px;
@@ -79,7 +79,7 @@ span
     width: 50%;
     border-right: white dashed 2px;
     border-bottom: white dashed 2px;
-    background-color: rgb(56, 56, 56);
+    background-color: #383838;
     border-radius: 0px 0px 10px 0px;
     text-align: center;
     color: white;
@@ -95,32 +95,186 @@ span
 {
     background-image: linear-gradient(to bottom, rgb(56, 56, 56), rgb(48, 45, 45));
 }
-#mess
-{
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20%;
-    margin-bottom: 2%;
-    background-color: #2d83c4;
-    color: white;
-    border-radius: 10px 10px 10px 10px;
-    padding: 10px;
-    width: 70%;
-}
-#btn3
-{
-    border-radius: 8px;
-    color: white;
-    background-color: #050303;
-}
-a
+.abtn
 {
     color: white;
     text-decoration: none;
     display: block;
-    float: left;
+    
 }
-a #rimg
+#mess
+{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15%;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 2%;
+    width: 96%;
+    background-image: linear-gradient(to bottom, #1f56ed, #671fed);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.triangle
+{
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 25px solid #671fed;
+    margin-left: 4%;
+}
+#triangle_margin
+{
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+#text
+{
+    border: white dashed 2px;
+    border-radius: 10px;
+    background-color:#383838;
+    color:#ffffff;
+    height: 50px;
+    width: 80%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    padding-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#submit
 {
     float: right;
+    border: white dashed 2px;
+    border-radius: 10px;
+    background-color:#383838;
+    color:#ffffff;
+    height: 50px;
+    width: 19%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 120%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.checked
+{
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes checking
+{
+    0%
+    {
+        width: 47%;
+    }
+    100%
+    {
+        
+    }
+}
+.anime
+{
+    animation: checking 2s 0.5s backwards;
+}
+.mark
+{
+    float: left;
+    border: white dashed 2px;
+    border-radius: 10px;
+    background-color:#383838;
+    color:#ffffff;
+    height: 50px;
+    width: 19%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.markdark
+{
+    float: left;
+    border: white dashed 2px;
+    border-radius: 10px;
+    background-color:#1a1919;
+    color:#ffffff;
+    height: 50px;
+    width: 47%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.guess
+{
+    float: right;
+    border: white dashed 2px;
+    border-radius: 10px;
+    background-color:#383838;
+    color:#ffffff;
+    height: 50px;
+    width: 76%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    text-align: center;
+    padding-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.guessdark
+{
+    float: right;
+    border: white dashed 2px;
+    border-radius: 10px;
+    background-color:#1a1919;
+    color:#ffffff;
+    height: 50px;
+    width: 47%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    text-align: center;
+    padding-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+p
+{
+    line-height: 2px;
+}
+.markdark > p
+{
+    color: #383838;
+    text-align: center;
+}
+.win
+{
+    border: #0a6b0f dashed 2px;
+    border-radius: 10px;
+    background-color:#4a9e4e;
+    color:white;
+    height: 80px;
+    width: 99%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    text-align: center;
+    padding-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.lose
+{
+    border: #6b0a0a dashed 2px;
+    border-radius: 10px;
+    background-color:#a54646;
+    color:white;
+    height: 80px;
+    width: 99%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    text-align: center;
+    padding-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
